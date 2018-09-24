@@ -26,7 +26,7 @@
                         <article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
                             <header class="mb-4">
                                 <div class="header-meta text-muted mb-5">
-                                    <span class="time"><?php tainacan_meta_date_author(); ?></span>
+                                    <span class="time"><?php //tainacan_meta_date_author(); ?></span>
                                 </div>
                             </header>
                             <?php if (tainacan_has_document()): ?>
@@ -160,7 +160,7 @@
         </div>
     </div><!-- /.row -->
 </main>
-<?php get_footer(); ?>
+<?php get_footer('full'); ?>
 <script>
     jQuery('#topNavbar').addClass('b-bottom-top');
     jQuery('nav.menu-belowheader').removeClass('border-bottom');

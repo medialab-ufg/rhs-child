@@ -3,7 +3,7 @@
 <!-- Get the menu if is create in panel admin -->
 <?php get_template_part( 'template-parts/menuBellowBanner' ); ?>
 
-<main class="mt-5 max-large margin-one-column">
+<main class="mt-5 max-large margin-one-column container">
     <div class="row">
         <div class="col col-sm mx-sm-auto">
             <?php if(have_posts()): ?>
@@ -15,7 +15,7 @@
                                 <li class="list-inline-item text-midnight-blue font-weight-bold title-page">
                                     <?php the_title(); ?>
                                 </li>
-                                <li class="list-inline-item float-right title-back"><a href="javascript:history.go(-1)"><?php _e('Back', 'tainacan-interface'); ?></a></li>
+                                <li class="list-inline-item pull-right title-back"><a href="javascript:history.go(-1)"><?php _e('Back', 'tainacan-interface'); ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                         <article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
                             <header class="mb-4">
                                 <div class="header-meta text-muted mb-5">
-                                    <span class="time"><?php //tainacan_meta_date_author(); ?></span>
+                                    <span class="time"><?php tainacan_meta_date_author(); ?></span>
                                 </div>
                             </header>
                             <?php if (tainacan_has_document()): ?>
@@ -88,7 +88,7 @@
                         <article role="article">
                             <!-- <h1 class="title-content-items"><?php _e('Information', 'tainacan-interface'); ?></h1> -->
                             <section class="tainacan-content single-item-collection margin-two-column">
-                                <div class="single-item-collection--information justify-content-center">
+                                <div class="single-item-collection--information justify-content-center container">
                                     <div class="row">
                                         <div class="col s-item-collection--metadata">
                                             <div class="card border-0">
@@ -103,19 +103,19 @@
                                                     <div class="btn-group" role="group">
                                                         <?php if ( true == get_theme_mod( 'facebook_share', true ) ) : ?> 
                                                             <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" class="item-card-link--sharing" target="_blank">
-                                                                <img src="<?php echo get_template_directory_uri().'/assets/images/facebook-circle.png'; ?>" alt="">
+                                                                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/facebook-circle.png'; ?>" alt="">
                                                             </a>
                                                         <?php endif; ?>
                                                         <?php if ( true == get_theme_mod( 'twitter_share', true ) ) : ?> 
                                                             <?php $twitter_option = get_option( 'twitter_user'); ?>
                                                             <?php $via = !empty($twitter_option) ? '&amp;via=' . get_option( 'twitter_user') : ''; ?>
 															<a href="http://twitter.com/share?url=<?php the_permalink(); ?>&amp;text=<?php the_title_attribute(); ?><?php echo $via; ?>" target="_blank" class="item-card-link--sharing">
-                                                                <img src="<?php echo get_template_directory_uri().'/assets/images/twitter-circle.png'; ?>" alt="">
+                                                                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/twitter-circle.png'; ?>" alt="">
                                                             </a>
                                                         <?php endif; ?>
                                                         <?php if ( true == get_theme_mod( 'google_share', true ) ) : ?> 
                                                             <a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="_blank" class="item-card-link--sharing">
-                                                                <img src="<?php echo get_template_directory_uri().'/assets/images/google-plus-circle.png'; ?>" alt="">
+                                                                <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/google-plus-circle.png'; ?>" alt="">
                                                             </a>
                                                         <?php endif; ?>
                                                     </div>

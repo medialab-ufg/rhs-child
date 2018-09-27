@@ -64,10 +64,20 @@ body, html {
 .mb-0, .my-0 {
     margin-bottom: 0 !important;
 }
+.mb-1, .my-1 {
+    margin-bottom: .25rem !important;
+}
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+}
 .text-oslo-gray {
     color: #898d8f !important;
 }
 @import "_simple-search";
+
 .image-placeholder {
     background-color: #cbcbcb;
     display: flex;
@@ -262,3 +272,23 @@ body, html {
         }
     }
 }
+
+@import "_single_collection_items";
+
+@import "_view-mode-grid";
+
+@import "_view-mode-mosaic";
+
+@import "_view-mode-frame";
+
+@import "_view-mode-books";
+
+@import "_view-mode-polaroid";
+
+@import "_view-mode-gallery";
+
+@import "_view-mode-profile";
+
+@import "_view-mode-document";
+
+@import "_view-mode-albums";
